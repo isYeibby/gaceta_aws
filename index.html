@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gaceta universitaria de la Universidad de la Sierra Sur. Noticias, agenda y voces de la comunidad UNSIS.">
+    <title>Gaceta UNSIS | Universidad de la Sierra Sur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html" aria-label="Gaceta UNSIS, inicio">
+                <span class="brand-mark"><img src="escudo_unsis.png" alt="UNSIS"></span>
+                <span><strong>Gaceta</strong><small>Universidad de la Sierra Sur</small></span>
+            </a>
+            <button class="menu-button" type="button" aria-label="Abrir navegación" aria-expanded="false" aria-controls="main-navigation">
+                <span></span><span></span>
+            </button>
+        </div>
+        <nav id="main-navigation" class="main-navigation" aria-label="Secciones de la gaceta">
+            <button class="tab is-active" type="button" data-target="tab-inicio" aria-selected="true">Portada</button>
+            <button class="tab" type="button" data-target="tab-eventos" aria-selected="false">Agenda</button>
+            <button class="tab" type="button" data-target="tab-egresados" aria-selected="false">Egresados</button>
+            <button class="tab" type="button" data-target="tab-comunidad" aria-selected="false">Comunidad</button>
+            <button class="tab tab--editor" type="button" data-target="tab-editor" aria-selected="false">Editor</button>
+            <button class="tab tab--subscribe" type="button" id="open-subscription">Suscribirse</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="masthead page-width" aria-labelledby="page-title">
+            <div class="masthead-copy">
+                <p class="eyebrow">Edición 04 <span>/</span> Octubre 2026</p>
+                <h1 id="page-title">La vida universitaria, contada desde dentro.</h1>
+                <p class="masthead-intro">Noticias, encuentros y voces de la comunidad UNSIS. Un espacio para leer lo que nos mueve y reconocer lo que construimos juntos.</p>
+                <div class="masthead-actions">
+                    <button class="text-link" type="button" data-target="tab-eventos">Ver la agenda <span aria-hidden="true">→</span></button>
+                    <span class="reading-time">Lectura de portada · 4 min</span>
+                </div>
+            </div>
+            <aside class="issue-note" aria-label="Tema de esta edición">
+                <span class="section-kicker">En esta edición</span>
+                <strong>Ideas que dejan huella</strong>
+                Historias de estudiantes, docentes y egresados que hacen comunidad más allá del aula.
+                <dl class="issue-stats">
+                    <div><dt>12</dt><dd>historias</dd></div>
+                    <div><dt>08</dt><dd>eventos</dd></div>
+                    <div><dt>01</dt><dd>comunidad</dd></div>
+                </dl>
+            </aside>
+        </section>
+
+        <div class="page-width">
+            <section id="tab-inicio" class="tab-content is-active" aria-labelledby="featured-title">
+                <div class="section-heading">
+                    <div><p class="section-kicker">Historias destacadas</p><h2 id="featured-title">Lo que está pasando en la UNSIS</h2></div>
+                    <span class="section-index">01 — 04</span>
+                </div>
+                <div class="story-grid" id="news-list" aria-live="polite">
+                    <p class="news-status">Cargando noticias...</p>
+                </div>
+            </section>
+
+            <section id="tab-eventos" class="tab-content" aria-labelledby="events-title" hidden>
+                <div class="section-heading"><div><p class="section-kicker">Agenda universitaria</p><h2 id="events-title">Encuentros para marcar en el calendario</h2></div></div>
+                <div class="events-grid">
+                    <article class="event-card"><p class="card-kicker">14 oct · 18:00 h</p><h3>Concierto de la Orquesta Sinfónica</h3><p>Auditorio principal · Entrada libre para toda la comunidad.</p><button class="text-link" type="button" data-message="Reserva registrada. Te avisaremos cuando se habilite el acceso.">Reservar lugar <span aria-hidden="true">→</span></button></article>
+                    <article class="event-card"><p class="card-kicker">18 oct · 10:00 h</p><h3>Feria y presentación de clubes</h3><p>Plaza cívica · Robótica, ajedrez, sustentabilidad y más.</p><button class="text-link" type="button" data-message="Te mostraremos los clubes disponibles próximamente.">Ver clubes <span aria-hidden="true">→</span></button></article>
+                    <article class="event-card"><p class="card-kicker">22 oct · 17:00 h</p><h3>Ponencia: IA en la salud</h3><p>Sala de usos múltiples · Con investigadores invitados.</p><button class="text-link" type="button" data-message="Tu interés quedó registrado.">Asistir <span aria-hidden="true">→</span></button></article>
+                </div>
+            </section>
+
+            <section id="tab-egresados" class="tab-content" aria-labelledby="alumni-title" hidden>
+                <div class="section-heading"><div><p class="section-kicker">Trayectorias</p><h2 id="alumni-title">Titulaciones recientes</h2></div></div>
+                <div class="alumni-list">
+                    <article class="alumni-item"><span class="avatar">AL</span><div><h3>Ana López Márquez</h3><p>Licenciatura en Informática</p></div><span class="year">2026</span></article>
+                    <article class="alumni-item"><span class="avatar">CM</span><div><h3>Carlos Martínez Ruiz</h3><p>Licenciatura en Enfermería</p></div><span class="year">2026</span></article>
+                    <article class="alumni-item"><span class="avatar">JG</span><div><h3>Julio Gómez Hernández</h3><p>Licenciatura en Administración Municipal</p></div><span class="year">2026</span></article>
+                    <article class="alumni-item"><span class="avatar avatar--coral">MS</span><div><h3>Mónica Silva</h3><p>Maestría en Salud Pública</p></div><span class="year">2026</span></article>
+                </div>
+            </section>
+
+            <section id="tab-comunidad" class="tab-content" aria-labelledby="community-title" hidden>
+                <div class="section-heading"><div><p class="section-kicker">Voces del campus</p><h2 id="community-title">La comunidad también cuenta</h2></div></div>
+                <div class="community-feed">
+                    <article class="post-card"><header><span class="avatar avatar--small">DA</span><div><h3>Daniela Aguilar</h3><time>Hace 2 horas</time></div></header><p>¿Alguien sabe si la cafetería central ya está vendiendo los chilaquiles verdes? Tengo hambre.</p><footer><button class="btn-text" type="button" data-message="Te damos 14 aplausos">♡ 14</button><button class="btn-text" type="button" data-message="Hay 5 respuestas en esta conversación">5 respuestas</button></footer></article>
+                    <article class="post-card"><header><span class="avatar avatar--small avatar--muted">A</span><div><h3>Usuario anónimo</h3><time>Hace 5 horas</time></div></header><p>Vi a la botarga de la universidad bailando cumbia cerca del auditorio. Estaba ensayando para la semana cultural.</p><footer><button class="btn-text" type="button" data-message="Te damos 42 aplausos">♡ 42</button><button class="btn-text" type="button" data-message="Hay 12 respuestas en esta conversación">12 respuestas</button></footer></article>
+                </div>
+            </section>
+
+            <section id="tab-editor" class="tab-content editor-section" aria-labelledby="editor-title" hidden>
+                <div class="section-heading">
+                    <div><p class="section-kicker">Administración</p><h2 id="editor-title">Editor de la gaceta</h2></div>
+                    <span class="section-index">...</span>
+                </div>
+                <div class="editor-layout">
+                    <form class="editor-form" id="news-form">
+                        <div class="editor-form-heading">
+                            <div><p class="section-kicker" id="form-mode">Nueva noticia</p><h3>Publicar una historia</h3></div>
+                            <button class="btn-text" id="cancel-edit" type="button" hidden>Cancelar edición</button>
+                        </div>
+                        <label for="news-title">Título</label>
+                        <input id="news-title" name="titulo" type="text" maxlength="160" required>
+                        <label for="news-details">Detalles</label>
+                        <textarea id="news-details" name="detalles" rows="6" maxlength="1000" required></textarea>
+                        <label for="news-date">Fecha de publicación</label>
+                        <input id="news-date" name="fecha" type="date" required>
+                        <label for="news-image">Imagen de la noticia</label>
+                        <input id="news-image" name="imagen" type="file" accept="image/*">
+                        <div class="form-actions">
+                            <button class="button button--primary" type="submit" id="save-news">Agregar noticia</button>
+                            <button class="button button--secondary" type="button" id="refresh-news">Actualizar lista</button>
+                        </div>
+                    </form>
+                    <div class="editor-list-panel">
+                        <div class="editor-list-heading">
+                            <div><p class="section-kicker">Contenido publicado</p><h3 id="editor-count">Noticias</h3></div>
+                            <span class="editor-list-status" id="editor-status" aria-live="polite"></span>
+                        </div>
+                        <div class="managed-news-list" id="managed-news-list" aria-live="polite">
+                            <p class="news-status">Cargando noticias...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <button class="fab" id="main-fab" type="button" aria-label="Crear nueva publicación" hidden>+</button>
+    <dialog class="subscription-dialog" id="subscription-dialog" aria-labelledby="subscription-title">
+        <form class="subscription-form" id="subscription-form" method="dialog">
+            <button class="dialog-close" id="close-subscription" type="button" aria-label="Cerrar formulario">×</button>
+            <p class="section-kicker">Noticias UNSIS</p>
+            <h2 id="subscription-title">Recibe la gaceta en tu correo</h2>
+            <p class="subscription-intro">Suscríbete para enterarte de las noticias y actividades de la comunidad universitaria.</p>
+            <label for="subscriber-email">Correo electrónico</label>
+            <input id="subscriber-email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required>
+            <button class="button button--primary" id="subscription-submit" type="submit">Suscribirme</button>
+        </form>
+    </dialog>
+    <div class="snackbar" id="snackbar" role="status" aria-live="polite"></div>
+    <footer class="site-footer page-width"><span>Gaceta UNSIS · 2026</span><a href="error.html">Aviso editorial</a><span>Hecha para la comunidad</span></footer>
+    <script src="app.js" defer></script>
+</body>
+</html>
